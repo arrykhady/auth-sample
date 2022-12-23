@@ -1,13 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text, Platform, TouchableOpacity } from 'react-native';
+
 import Logo from '../components/common/Logo';
 
 
 /**
- * Props [
- *  driver: navigation object
- *  title: string
- * ]
+ * 
  * @param {*} props 
  */
 const Header = ({ title }) => {

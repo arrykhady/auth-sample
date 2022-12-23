@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useAuth } from '../providers/authContext';
 
+
 const Home = ({ navigation }) => {
 
     const { user, setAuthentification } = useAuth()
