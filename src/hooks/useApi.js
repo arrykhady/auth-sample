@@ -46,7 +46,7 @@ export const useApi = (initialRequest = "") => {
         if (!request || (request.trim() === "")) return;
 
         let unmounted = false;
-        let timeout;
+        let timeout = null;
 
         try {
             dispatch({ type: 'FETCH_INIT' })
@@ -63,7 +63,7 @@ export const useApi = (initialRequest = "") => {
 
         return () => {
             unmounted = true;
-            clearTimeout(timeout);
+            if (timeout) clearTimeout(timeout);
         }
     }, [request])
 

@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Keyboard, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, View } from 'react-native'
+
 import Click from '../components/common/Click'
 import Loader from '../components/common/Loader'
 import Logo from '../components/common/Logo'
+
 import Input from '../components/inputs/Input'
+
 import { useApi } from '../hooks/useApi'
+
 import { useAuth } from '../providers/authContext'
+
 import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 const Register = ({ navigation }) => {
 
@@ -113,10 +119,7 @@ const Register = ({ navigation }) => {
                         <View style={styles.register_space} />
 
                         {(error !== "") && (
-                            <>
-                                <Snack message={error} />
-                                <View style={styles.register_space} />
-                            </>
+                            <Snack message={error} />
                         )}
 
                         {loading ? (

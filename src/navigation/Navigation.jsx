@@ -4,12 +4,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Header from './Header';
 
-import Login from '../screens/Login';
-import Home from '../screens/Home';
-import Settings from '../screens/Settings';
-import Register from '../screens/Register';
 import Splash from '../screens/Splash';
 
+import Home from '../screens/Home';
+
+import Login from '../screens/Login';
+import Register from '../screens/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,16 +36,6 @@ const AccountStackScreens = () => {
             <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{
-                    title: 'Auth Sample',
-                    header: () => (
-                        <Header title="Auth Sample" />
-                    )
-                }}
-            />
-            <Stack.Screen
-                name="Settings"
-                component={Settings}
                 options={{
                     title: 'Auth Sample',
                     header: () => (

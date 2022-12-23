@@ -97,10 +97,7 @@ const Login = ({ navigation }) => {
                         <View style={styles.login_space} />
 
                         {(error !== "") && (
-                            <>
-                                <Snack message={error} />
-                                <View style={styles.login_space} />
-                            </>
+                            <Snack message={error} />
                         )}
 
                         {loading ? (
